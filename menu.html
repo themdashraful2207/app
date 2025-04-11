@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="/civilapp/manifest.json">
+    <link rel="manifest" href="/app/manifest.json">
     <title>Login Page</title>
     <style>
         :root {
@@ -375,7 +375,7 @@
             }
 
             try {
-                const response = await fetch('https://themdashraful2207.github.io/civilapp/credentials.json');
+                const response = await fetch('https://themdashraful2207.github.io/app/credentials.json');
                 if (!response.ok) throw new Error("Credentials file not found");
                 const data = await response.json();
                 
@@ -461,7 +461,7 @@
 
         // Register service worker
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/civilapp/sw.js')
+            navigator.serviceWorker.register('/app/sw.js')
                 .then(() => console.log('Service Worker Registered'))
                 .catch(err => console.error('Service Worker Error:', err));
         }
